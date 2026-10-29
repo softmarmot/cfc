@@ -12,6 +12,7 @@
 	import Faq from '$lib/components/Faq.svelte';
 	import Contact from '$lib/components/Contact.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import MobileBar from '$lib/components/MobileBar.svelte';
 </script>
 
 <svelte:head>
@@ -38,3 +39,4 @@
 	<Contact />
 </main>
 <Footer />
+<MobileBar />

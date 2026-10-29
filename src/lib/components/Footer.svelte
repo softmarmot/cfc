@@ -4,7 +4,7 @@
 	import roundel from '$lib/assets/logo-roundel.jpg';
 </script>
 
-<footer class="border-t-4 border-blood bg-black">
+<footer class="border-t-4 border-blood bg-black pb-[calc(4.5rem+env(safe-area-inset-bottom))] lg:pb-0">
 	<div class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
 		<div class="flex items-start gap-5">
 			<img src={roundel} alt="" class="size-20 shrink-0 rounded-full" />
