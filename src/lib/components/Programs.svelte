@@ -3,9 +3,9 @@
 	import SectionTitle from './SectionTitle.svelte';
 	import girl from '$lib/assets/girl-jab.jpg';
 	import sparring from '$lib/assets/sparring.jpg';
-	import team from '$lib/assets/team-kyiv.jpg';
+	import mma from '$lib/assets/kids-mma.jpg';
 
-	const images = { girl, sparring, team };
+	const images = { girl, sparring, mma };
 </script>
 
 <section id="programs" class="relative bg-coal py-24 sm:py-32">
@@ -32,7 +32,7 @@
 		</div>
 
 		<h3 class="font-head mt-24 text-3xl font-bold uppercase">Groups for <span class="text-flame">every age</span></h3>
-		<div class="mt-8 grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+		<div class="mt-8 grid gap-px bg-white/10 sm:grid-cols-2 lg:grid-cols-5 [&>*:last-child]:sm:col-span-2 [&>*:last-child]:lg:col-span-1">
 			{#each groups as g}
 				<div class="bg-coal p-7 transition hover:bg-steel">
 					<p class="headline text-4xl text-flame">{g.ages}</p>

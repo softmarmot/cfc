@@ -1,11 +1,11 @@
 <script>
 	import { club, disciplines } from '$lib/content.js';
-	import team from '$lib/assets/team-kyiv.jpg';
+	import team from '$lib/assets/team-calgary.jpg';
 	import roundel from '$lib/assets/logo-roundel.jpg';
 </script>
 
 <section id="top" class="grain relative isolate flex min-h-svh flex-col overflow-hidden">
-	<img src={team} alt="" class="photo absolute inset-0 -z-20 size-full object-cover object-center opacity-40" />
+	<img src={team} alt="" class="photo absolute inset-0 -z-20 size-full object-cover object-[50%_40%] opacity-40" />
 	<!-- dark scrims keep the headline and copy readable over the photo -->
 	<div class="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/90 to-ink/40"></div>
 	<div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-transparent to-ink/70"></div>

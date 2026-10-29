@@ -10,7 +10,7 @@
 			<a href="#contact" class="btn-red">Reserve your spot</a>
 		</div>
 
-		<div class="mt-14 grid gap-8 lg:grid-cols-3">
+		<div class="mt-14 grid items-start gap-6 md:grid-cols-2">
 			{#each schedule as day}
 				<div class="border border-white/10 bg-coal/70 p-6 sm:p-8">
 					<div class="flex items-center gap-3">

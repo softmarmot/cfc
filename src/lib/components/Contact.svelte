@@ -33,11 +33,11 @@
 				</div>
 				<div>
 					<dt class="eyebrow">Phone</dt>
-					<dd class="font-head mt-1 text-xl"><a class="hover:text-flame" href="tel:{club.phone.replace(/[^+\d]/g, '')}">{club.phone}</a></dd>
+					<dd class="font-head mt-1 text-xl"><a class="hover:text-flame" href={club.phoneHref}>{club.phone}</a></dd>
 				</div>
 				<div>
-					<dt class="eyebrow">Email</dt>
-					<dd class="font-head mt-1 text-xl"><a class="hover:text-flame" href="mailto:{club.email}">{club.email}</a></dd>
+					<dt class="eyebrow">Instagram</dt>
+					<dd class="font-head mt-1 text-xl"><a class="hover:text-flame" href={club.instagram} target="_blank" rel="noopener">{club.instagramHandle}</a></dd>
 				</div>
 			</dl>
 

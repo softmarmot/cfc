@@ -1,14 +1,20 @@
 <script>
 	import { club } from '$lib/content.js';
 	import SectionTitle from './SectionTitle.svelte';
-	import team from '$lib/assets/team-kyiv.jpg';
+	import kyiv from '$lib/assets/team-kyiv.jpg';
+	import calgary from '$lib/assets/team-calgary.jpg';
+	import women from '$lib/assets/women-fitness.jpg';
+	import mma from '$lib/assets/kids-mma.jpg';
 	import jerseys from '$lib/assets/kids-jerseys.jpg';
 	import girl from '$lib/assets/girl-jab.jpg';
 
 	const items = [
-		{ src: team, alt: 'CFC youth team after training', cls: 'col-span-2 row-span-2' },
-		{ src: girl, alt: 'Girls group athlete throwing a jab', cls: 'md:row-span-2' },
-		{ src: jerseys, alt: 'CFC kids in club rash guards', cls: '' }
+		{ src: kyiv, alt: 'CFC youth team in the Kyiv gym', cls: 'col-span-2 row-span-2' },
+		{ src: calgary, alt: 'Adult team in the CFC Calgary gym', cls: 'md:row-span-2', pos: 'object-[50%_60%]' },
+		{ src: women, alt: 'Women’s fitness kickboxing athlete in guard', cls: '', pos: 'object-top' },
+		{ src: mma, alt: 'Young athlete from the kids MMA program', cls: '', pos: 'object-[50%_25%]' },
+		{ src: girl, alt: 'Girls group athlete throwing a jab', cls: '', pos: 'object-top' },
+		{ src: jerseys, alt: 'CFC kids in club rash guards', cls: '', pos: 'object-top' }
 	];
 
 	let active = $state(-1);
@@ -20,7 +26,7 @@
 	<div class="mx-auto max-w-7xl px-4 sm:px-6">
 		<SectionTitle eyebrow="Gallery" title="Life at" accent="CFC." />
 
-		<div class="mt-14 grid auto-rows-[10rem] grid-cols-2 gap-3 sm:auto-rows-[14rem] md:grid-cols-4">
+		<div class="mt-14 grid grid-flow-dense auto-rows-[11rem] grid-cols-2 gap-3 sm:auto-rows-[14rem] md:grid-cols-4">
 			{#each items as item, i}
 				<button
 					class="group relative overflow-hidden bg-ink {item.cls}"
@@ -30,7 +36,7 @@
 					<img
 						src={item.src}
 						alt={item.alt}
-						class="photo size-full object-cover transition duration-500 group-hover:scale-105"
+						class="photo size-full object-cover transition duration-500 group-hover:scale-105 {item.pos ?? ''}"
 					/>
 				</button>
 			{/each}
@@ -38,11 +44,11 @@
 				href={club.instagram}
 				target="_blank"
 				rel="noopener"
-				class="group col-span-2 flex flex-col md:col-span-1 justify-end bg-blood p-6 transition-colors hover:bg-white"
+				class="group flex flex-col justify-end bg-blood p-5 transition-colors hover:bg-white sm:p-6 md:col-span-2"
 			>
 				<span class="headline text-3xl text-white group-hover:text-ink sm:text-4xl">More on Instagram</span>
-				<span class="font-head mt-2 text-sm font-semibold tracking-widest text-white uppercase group-hover:text-ink">
-					Follow us →
+				<span class="font-head mt-2 text-sm font-semibold tracking-widest text-white group-hover:text-ink">
+					{club.instagramHandle} →
 				</span>
 			</a>
 		</div>

@@ -7,12 +7,18 @@ export const club = {
 	city: 'Calgary',
 	founded: 2008,
 	tagline: 'Train. Grow. Win.',
-	phone: '+1 (403) 555-0148',
-	email: 'hello@cfccalgary.ca',
-	address: '1234 Example Ave SE, Calgary, AB T2G 0A0',
-	mapUrl: 'https://maps.google.com/?q=Calgary,AB',
-	instagram: 'https://instagram.com/',
-	facebook: 'https://facebook.com/'
+	phone: '+1 (587) 227-8487',
+	phoneHref: 'tel:+15872278487',
+	address: '6434 1a St SW, Calgary, AB T2H 0G6, Canada',
+	mapUrl: 'https://maps.app.goo.gl/MpqjDHPX1Yh6dvy37',
+	instagram: 'https://www.instagram.com/champion_cfc/',
+	instagramHandle: '@champion_cfc',
+	facebook: 'https://www.facebook.com/ChampionFightClub'
+};
+
+export const developer = {
+	name: 'softmarmot',
+	url: 'https://github.com/softmarmot'
 };
 
 export const nav = [
@@ -25,7 +31,7 @@ export const nav = [
 	{ href: '#contact', label: 'Contact' }
 ];
 
-export const disciplines = ['Kickboxing', 'Muay Thai', 'MMA', 'Kids 5–13', 'Girls only', 'Adults 14+'];
+export const disciplines = ['Kickboxing', 'Muay Thai', 'MMA', 'Kids 5–13', 'Girls only', 'Women’s fitness', 'Adults 14+'];
 
 export const stats = [
 	{ value: '18', label: 'Years of fighting spirit' },
@@ -70,9 +76,9 @@ export const programs = [
 	},
 	{
 		title: 'MMA',
-		tag: 'Teens & adults',
-		text: 'Striking, takedowns and ground control combined. Well-rounded skills for fitness, self-defence and competition.',
-		image: 'team'
+		tag: 'Kids 5–12 & adults',
+		text: 'Striking, takedowns and ground control combined. Includes our original kids MMA program for ages 5 to 12.',
+		image: 'mma'
 	}
 ];
 
@@ -80,7 +86,8 @@ export const groups = [
 	{ title: 'Little Champions', ages: '5–7 years', text: 'Coordination, balance and discipline through play. The first step into martial arts.' },
 	{ title: 'Kids', ages: '7–13 years', text: 'Technique, fitness and confidence. Optional path to tournaments for those who want to compete.' },
 	{ title: 'Girls only', ages: '8–13 years', text: 'A dedicated kickboxing & Muay Thai group where girls train together with confidence.' },
-	{ title: 'Teens & Adults', ages: '14+', text: 'Get fit, learn real skills and blow off steam. Beginners welcome, no experience needed.' }
+	{ title: 'Teens & Adults', ages: '14+', text: 'Get fit, learn real skills and blow off steam. Beginners welcome, no experience needed.' },
+	{ title: 'Women’s fitness kickboxing', ages: '15+ / 18+', text: 'Morning classes for girls 15+ and women 18+. Burn calories, build strength, learn to hit.' }
 ];
 
 export const schedule = [
@@ -95,6 +102,7 @@ export const schedule = [
 	{
 		days: 'Tue • Thu',
 		classes: [
+			{ time: '10:00 – 11:30 AM', group: 'Women & girls 15+' },
 			{ time: '4:00 – 5:30 PM', group: 'Girls 8–13' },
 			{ time: '5:30 – 7:00 PM', group: 'Kids 7–9' },
 			{ time: '7:00 – 8:30 PM', group: 'Adults' }
@@ -103,19 +111,25 @@ export const schedule = [
 	{
 		days: 'Saturday',
 		classes: [
-			{ time: '10:00 – 11:30 AM', group: 'Girls 8–13' },
-			{ time: '11:30 AM – 1:00 PM', group: 'Kids 7–9' },
-			{ time: '1:00 – 2:30 PM', group: 'Adults' }
+			{ time: '10:00 – 11:30 AM', group: 'Women & girls 15+' },
+			{ time: '11:30 AM – 1:00 PM', group: 'Girls 8–13' },
+			{ time: '1:00 – 2:30 PM', group: 'Kids 7–9' },
+			{ time: '2:30 – 4:00 PM', group: 'Adults' }
 		]
+	},
+	{
+		days: 'Sunday',
+		classes: [{ time: '10:00 – 11:30 AM', group: 'Women & girls 15+' }]
 	}
 ];
 
 export const coaches = [
 	{
-		name: 'Coach Name',
-		role: 'Founder & Head Coach',
-		bio: 'Founded CFC in 2008. Master of Sport in kickboxing, 20+ years of coaching, has raised national and European champions.',
-		tags: ['Kickboxing', 'Muay Thai']
+		name: 'Andrii Karpuk',
+		role: 'Head Coach',
+		bio: 'Leads the CFC coaching system that took the club from Bakhmut to Kyiv to Calgary, coaching everyone from first-day beginners to competition fighters.',
+		tags: ['Kickboxing', 'Muay Thai', 'MMA'],
+		photo: 'andrii'
 	},
 	{
 		name: 'Coach Name',
