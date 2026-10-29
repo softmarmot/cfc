@@ -18,7 +18,7 @@ export const club = {
 
 export const developer = {
 	name: 'softmarmot',
-	url: 'https://github.com/softmarmot'
+	url: 'https://softmarmot.com'
 };
 
 export const nav = [
