@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-ink: #0a0a0a;
+	--color-coal: #141414;
+	--color-steel: #1f1f1f;
+	--color-blood: #e10600;
+	--color-blood-dark: #a80400;
+	/* Brighter red for text on dark surfaces: passes WCAG AA (5.2:1+) where #e10600 does not */
+	--color-flame: #ff3b2f;
+	--color-bone: #f4f1ec;
+
+	--font-display: 'Anton', 'Oswald', Impact, sans-serif;
+	--font-head: 'Oswald', 'Arial Narrow', sans-serif;
+	--font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+	html {
+		color-scheme: dark;
+		scroll-behavior: smooth;
+		scroll-padding-top: 5rem;
+	}
+	body {
+		@apply bg-ink text-bone font-sans antialiased;
+	}
+	::selection {
+		@apply bg-blood text-white;
+	}
+	:focus-visible {
+		outline: 3px solid var(--color-flame);
+		outline-offset: 3px;
+	}
+	h1,
+	h2,
+	h3 {
+		text-wrap: balance;
+	}
+}
+
+/* Heavy condensed uppercase headline, as on the club posters */
+@utility headline {
+	@apply font-display uppercase leading-[0.9] tracking-tight;
+}
+@utility eyebrow {
+	@apply font-head text-sm font-semibold uppercase tracking-[0.25em] text-flame;
+}
+/* Red "brush stroke" banner used for day labels and promo tags */
+@utility brush {
+	@apply font-head inline-block bg-blood px-4 py-1 font-bold uppercase tracking-wide text-white;
+	clip-path: polygon(2% 8%, 100% 0, 97% 52%, 100% 100%, 0 94%, 3% 50%);
+}
+@utility btn {
+	@apply font-head inline-flex min-h-12 items-center justify-center gap-2 px-7 py-3 text-base font-bold uppercase tracking-wider transition-colors;
+}
+@utility btn-red {
+	@apply btn bg-blood text-white hover:bg-white hover:text-ink;
+}
+@utility btn-ghost {
+	@apply btn bg-transparent text-white ring-2 ring-white/70 ring-inset hover:bg-white hover:text-ink;
+}
+/* Film-grain texture overlay for the gritty poster feel */
+.grain::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	opacity: 0.12;
+	mix-blend-mode: overlay;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@utility photo {
+	@apply grayscale contrast-125;
+}
+
+@keyframes marquee {
+	to {
+		transform: translateX(-50%);
+	}
+}
+.animate-marquee {
+	animation: marquee 30s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+	.animate-marquee {
+		animation: none;
+	}
+	html {
+		scroll-behavior: auto;
+	}
+}
